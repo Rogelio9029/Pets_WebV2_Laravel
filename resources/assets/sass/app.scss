@@ -15,3 +15,11 @@
 
 @import "~tailwindcss/utilities.css";
 
+.nav:hover span:last-child {
+    width: 100%;
+}
+
+.input:hover input:last-child {
+    width: 100%;
+}
+
