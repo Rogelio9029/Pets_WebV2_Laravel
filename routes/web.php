@@ -14,7 +14,7 @@
 Route::get('/', function () {
     // return view('User_Views/Home');
     return view('welcome');
-});
+})->name('/');
 
 Route::get('index', function () {
     // return view('User_Views/Home');
