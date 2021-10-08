@@ -17,7 +17,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
 
-    <body id="app" class="">
+    <body class="">
         
         <div class="relative bg-white">
             <div class="max-w-7xl mx-auto">
@@ -198,7 +198,7 @@
                         @endguest
                     </div>
 
-                    <div x-show="menu" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden"
+                    <div x-show="menu" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden z-20"
                         x-transition:enter="duration-200 ease-out"
                         x-transition:enter-start="opacity-0 scale-95"
                         x-transition:enter-end="opacity-100 scale-100"
