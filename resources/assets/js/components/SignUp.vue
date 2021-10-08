@@ -3,7 +3,7 @@
         <div class="min-w-screen md:min-h-screen flex items-center justify-center px-5 py-5">
             <div class="bg-white text-gray-500 rounded-xl shadow-2xl w-full overflow-hidden" style="max-width:1000px">
                 <div class="md:flex w-full">
-                    <img :src="`/storage/images/SignUp.jpg`" resizeMode = 'cover'  class="hidden md:block w-1/2" srcset="">
+                    <img :src="`/images/SignUp.jpg`" resizeMode = 'cover'  class="hidden md:block w-1/2" srcset="">
                     <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
                         <div class="text-center mb-5">
                             <h1 class="font-bold text-3xl text-gray-900">REGISTRATE</h1>
