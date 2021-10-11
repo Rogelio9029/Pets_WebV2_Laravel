@@ -25,5 +25,10 @@
     "dependencies": {
         "browser-sync": "^2.27.5",
         "sweetalert2": "^11.1.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
     }
 }
