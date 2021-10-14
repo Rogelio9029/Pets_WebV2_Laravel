@@ -46,4 +46,10 @@ Route::get('register', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
+
+Route::get('admin', 'AdminController@index')->name('admin');
+
+Route::get('pets-admin', function () {
+    return view('admin.pets.table');
+})->name('pets-admin');

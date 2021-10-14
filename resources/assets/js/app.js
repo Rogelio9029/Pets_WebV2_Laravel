@@ -17,6 +17,14 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+Vue.component('sign-up', require('./components/auth/SignUp.vue'));
+
+Vue.component('home-admin', require('./components/admin/HomeAdmin.vue'));
+
+Vue.component('pet-table', require('./components/admin/Pets/Table.vue'));
+Vue.component('pet-register', require('./components/admin/Pets/Register.vue'));
+Vue.component('pet-edit', require('./components/admin/Pets/Edit.vue'));
+
 const app = new Vue({
     el: '#app'
 });
