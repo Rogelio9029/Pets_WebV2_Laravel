@@ -1,13 +1,5 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-// @import "variables";
-
-// Bootstrap
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
 
 @import "~tailwindcss/base.css";
 
@@ -16,10 +8,9 @@
 @import "~tailwindcss/utilities.css";
 
 .nav:hover span:last-child {
-    width: 100%;
+  width: 100%;
 }
 
 .input:hover input:last-child {
-    width: 100%;
+  width: 100%;
 }
-

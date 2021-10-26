@@ -20,7 +20,6 @@ class CreateSchedulesTable extends Migration
             $table->integer('id_pet_service')->unsigned();
             $table->integer('id_quote')->unsigned();
             $table->timestamps();
-
             $table->foreign('id_pet_service')->references('id')->on('pet_services');
             $table->foreign('id_quote')->references('id')->on('quotes');
         });

@@ -288,13 +288,18 @@
                                 <img src="{{ asset('icons/admin/pets.svg') }}" width="40" height="auto" />
                                 <span class="md:text-sm">Mascotas</span>
                             </a>
+                            <a href="{{ route('gender-admin') }}"
+                                class="flex justify-center my-2 items-center p-3 space-x-2 rounded-md hover:bg-gray-100 font-bold uppercase">
+                                <img src="{{ asset('icons/admin/pets.svg') }}" width="40" height="auto" />
+                                <span class="md:text-sm">Generos</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
             </aside>
 
             <!-- Main content -->
-            <main class="p-5 max-h-full overflow-y-scroll w-full">
+            <main class="max-h-full overflow-y-scroll w-full">
                 <div class="mb-20">
                     <!-- Start Content -->
                     @yield('content')
@@ -322,8 +327,6 @@
     </script>
 
     @yield('scripts')
-
-
 </body>
 
 </html>
