@@ -7,79 +7,51 @@ use Illuminate\Http\Request;
 
 class GenderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return response()->json(Gender::all(), 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    public function create(){ }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'gender' => 'required|string|max:20|unique:genders',
+        ]);
+        $gender = Gender::create($validatedData);
+        return response()->json([
+            'gender' => $gender,
+            'success' => 'Success a create'
+        ], 200);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Gender  $gender
-     * @return \Illuminate\Http\Response
-     */
     public function show(Gender $gender)
     {
-        //
+        return response()->json(['gender' => $gender], 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Gender  $gender
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Gender $gender)
-    {
-        //
-    }
+    public function edit(Gender $gender){ }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Gender  $gender
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Gender $gender)
     {
-        //
+        $validatedData = $request->validate([
+            'gender' => 'required|string|max:20|unique:genders',
+        ]);
+        return $validatedData;
+        $gender->update($validatedData);
+        return response()->json([
+            'gender' => $gender,
+            'success' => 'Success a update'
+        ], 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Gender  $gender
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Gender $gender)
     {
-        //
+        $gender->delete();
+        return response()->json([
+            'gender' => $gender,
+            'success' => 'Success a delete'
+        ], 200);
     }
 }

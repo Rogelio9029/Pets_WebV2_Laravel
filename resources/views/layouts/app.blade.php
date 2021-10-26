@@ -19,7 +19,6 @@
 </head>
 
 <body class="">
-
     <div class="relative bg-white">
         <div class="max-w-7xl mx-auto">
             <div x-data="{menu: false}" class="flex justify-between items-center border-b-2 border-gray-100 
